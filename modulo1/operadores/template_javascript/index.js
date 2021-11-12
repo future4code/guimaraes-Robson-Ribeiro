@@ -140,4 +140,19 @@
 
     }
 
+    {
+        //Desafios
+        let atividade = "Para este exercício, será necessário o conhecimento das fórmulas para mudar a unidade de temperatura entre Graus Celsius(°C),  Graus Fahrenheit(°F) e Kelvin(K). Abaixo estão duas delas: \n "+
+        "a) Calcule e mostre o valor de 77°F em  K, mostrando a unidade no console também. \n "+
+        "b) Calcule e mostre o valor de 80°C em °F, mostrando a unidade no console também \n "+
+        "c) Calcule e mostre o valor de 30°C em °F e K, mostrando as unidades no console também \n "+
+        "d) Altere o último item para que o usuário insira o valor em graus Celsius que ele deseja converter \n "
+        let grausKelvimFormular = "(KELVIN) = (GRAUS_FAHRENHEIT - 32)*(5/9) + 273.15"
+        let grausCelsiusFormular = "(GRAUS_FAHRENHEIT) = (GRAUS_CELSIUS)*(9/5) + 32" 
+
+        let calc = (77 -32) * (5/9) + 273.15
+        console.log(`Calcule e mostre o valor de 77°F em  K, mostrando a unidade no console também. \n Resultado: ${calc}`)
+
+    }
+
 }
