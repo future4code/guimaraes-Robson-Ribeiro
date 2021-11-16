@@ -23,7 +23,6 @@ function calculaAreaRetangulo() {
   let largura = Number(prompt("Informe uma largura"))
   let resultado = altura * largura
   console.log(resultado)
-
 }
 
 // EXERCÍCIO 02
@@ -35,18 +34,13 @@ function imprimeIdade() {
   console.log(idade)
 }
 
-imprimeIdade()
 
 // EXERCÍCIO 03
 function calculaIMC(peso, altura) {
   // implemente sua lógica aqui
   let imc = peso / (altura * altura)
-
   return imc
 }
-
-calculaIMC(85, 1.8)
-calculaIMC(70,1.65)
 
 // EXERCÍCIO 04
 function imprimeInformacoesUsuario() {
@@ -55,10 +49,8 @@ function imprimeInformacoesUsuario() {
   let nome = prompt("Digite seu nome")
   let idade = prompt("Digite sua idade")
   let email = prompt("Digite seu email")
-
   console.log(`Meu nome é ${nome}, tenho ${idade} anos, e o meu email é ${email}.`)
 }
-imprimeInformacoesUsuario()
 
 // EXERCÍCIO 05
 function imprimeTresCoresFavoritas() {
@@ -67,26 +59,20 @@ function imprimeTresCoresFavoritas() {
   let cor2 = prompt("Digite outra cor")
   let cor3 = prompt("Digite mais uma cor")
   let resulado = [cor1, cor2, cor3]
-
   console.log(resulado)
 }
-imprimeTresCoresFavoritas()
 
 // EXERCÍCIO 06
 function retornaStringEmMaiuscula(string) {
   // implemente sua lógica aqui
   return string.toUpperCase()
 }
-retornaStringEmMaiuscula("oi")
-retornaStringEmMaiuscula("bAnAnA")
 
 // EXERCÍCIO 07
 function calculaIngressosEspetaculo(custo, valorIngresso) {
   // implemente sua lógica aqui
   return custo / valorIngresso
 }
-calculaIngressosEspetaculo(3000, 100)
-calculaIngressosEspetaculo(5500, 50)
 
 // EXERCÍCIO 08
 function checaStringsMesmoTamanho(string1, string2) {
@@ -94,9 +80,6 @@ function checaStringsMesmoTamanho(string1, string2) {
   let resultado = Number(string1.length) === Number(string2.length)
   return resultado
 }
-checaStringsMesmoTamanho("ola","abc")
-checaStringsMesmoTamanho("teste","porta")
-checaStringsMesmoTamanho("abc","abcd")
 
 // EXERCÍCIO 09
 function retornaPrimeiroElemento(array) {
@@ -117,11 +100,9 @@ function trocaPrimeiroEUltimo(array) {
   // implemente sua lógica aqui  
   let ultimoRegistro = array.length
   let primeito = array[0]
-  let ultimo = array[ultimoRegistro - 1]
-  
+  let ultimo = array[ultimoRegistro - 1]  
   array[0] = ultimo
-  array[ultimoRegistro - 1] = primeito
-  
+  array[ultimoRegistro - 1] = primeito  
   return array
 }
 
@@ -135,7 +116,23 @@ function checaIgualdadeDesconsiderandoCase(string1, string2) {
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
   // implemente sua lógica aqui
+  let anoAtual = Number(prompt("Informe o ano atual"))
+  let anoNascimento = Number(prompt("Informe o ano de nascimento"))
+  let anoEmissao = Number(prompt("Informe o ano de emissão da carteira "))
+  
+  let difanoAtualEmissao = anoAtual - anoEmissao
+  let idade = anoAtual - anoNascimento
+  let validacao = false
+  
+  if(idade <= 20 && difanoAtualEmissao == 5){
+    validacao = true
+  }
 
+  if((idade >= 20 && idade <= 50 ) || difanoAtualEmissao == 10){
+    validacao = true
+  }
+
+  console.log(validacao)
 }
 
 // EXERCÍCIO 14
