@@ -211,7 +211,6 @@
     +"FI: Final")
     const categoria = prompt("Opções de categoria: 1, 2, 3 e 4")
     const quantidadeIngressos = prompt("Quantos ingresso deseja?")
-
     
     
 }
