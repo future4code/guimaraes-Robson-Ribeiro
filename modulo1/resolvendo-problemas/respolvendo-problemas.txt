@@ -1,0 +1,10 @@
+1. Ter atenção no Enunciado
+2. Retirar informações Relevantes
+3. Pensar Entradas e Saídas
+4. Fazer um equema Visual
+5. Criar Código Feio
+6. Testar Força-Bruta
+7. Refatorar
+
+
+
