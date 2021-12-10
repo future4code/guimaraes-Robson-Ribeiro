@@ -116,25 +116,53 @@ function retornaChamadaDeFilme(filme) {
 }
 
 // EXERCÍCIO 12
-function retornaPessoaAnonimizada(pessoa) {
-   let pessoaAnonima = {...pessoa,  nome: "ANÔNIMO" }
-
-   return pessoaAnonima
+function retornaPessoaAnonimizada(pessoas) {
+   return {...pessoas,  nome: "ANÔNIMO" }
 }
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
-   
+   let minHeight = 1.5
+   let minAge = 14
+   let maxAge = 60
+   return peopleAuthorized(pessoas, minHeight, minAge, maxAge)
+}
+
+const peopleAuthorized = ( pessoas, minHeight, minAge, maxAge ) => {
+    return pessoas.filter( people => {
+        return people.idade > minAge && people.idade < maxAge && people.altura > minHeight
+    })    
 }
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
-  
+    let minHeight = 1.5
+    let minAge = 14
+    let maxAge = 60
+    return peopleDenied(pessoas, minHeight, minAge, maxAge)
+}
+
+const peopleDenied = (pessoas, minHeight, minAge, maxAge) =>{
+    return pessoas.filter( people => {
+        return people.idade <= minAge || people.idade >= maxAge || people.altura <= minHeight
+    })    
 }
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
+    contas.map( conta =>{
+        return calcPurchases(conta.compras)
+    })
+}
 
+const calcPurchases = (compras) => {
+    let purchases = 0
+    //console.log(compras)
+    for(let i = 0; i < compras.length; i++){
+        purchases += compras[i]
+    }
+    console.log(purchases)
+    return purchases
 }
 
 // EXERCÍCIO 15A
