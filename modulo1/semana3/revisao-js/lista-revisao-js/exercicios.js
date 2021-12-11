@@ -149,10 +149,14 @@ const peopleDenied = (pessoas, minHeight, minAge, maxAge) =>{
 }
 
 // EXERCÍCIO 14
-function retornaContasComSaldoAtualizado(contas) {
-    contas.map( conta =>{
-        return calcPurchases(conta.compras)
-    })
+function retornaContasComSaldoAtualizado(contas) { 
+    console.log(contas)
+    
+}
+
+const calcBalance = (balance, purchase) => {
+    const result = balance - purchase
+    return result
 }
 
 const calcPurchases = (compras) => {
@@ -161,7 +165,7 @@ const calcPurchases = (compras) => {
     for(let i = 0; i < compras.length; i++){
         purchases += compras[i]
     }
-    console.log(purchases)
+    //console.log(purchases)
     return purchases
 }
 
