@@ -150,8 +150,13 @@ const peopleDenied = (pessoas, minHeight, minAge, maxAge) =>{
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) { 
-    console.log(contas)
+    let count = contas.length
     
+    for(let i = 0; i < count; i++){
+        contas[i].saldoTotal = calcBalance(contas[i].saldoTotal, calcPurchases(contas[i].compras))
+        contas[i].compras = []
+    }
+    return contas
 }
 
 const calcBalance = (balance, purchase) => {
@@ -161,17 +166,15 @@ const calcBalance = (balance, purchase) => {
 
 const calcPurchases = (compras) => {
     let purchases = 0
-    //console.log(compras)
     for(let i = 0; i < compras.length; i++){
         purchases += compras[i]
     }
-    //console.log(purchases)
     return purchases
 }
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
-  
+  return consultas.sort((a,b) => a - b )
 }
 
 // EXERCÍCIO 15B
