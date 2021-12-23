@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="./ctrl-estoque.css">
     <title>Controle de Estoque</title>
 </head>
 <body>
-    <div>
+    <div id="divTitulo">
         <p>Nova Amazom</p>
     </div>
     
-    <div>
+    <div id="menu">
         <a href="./index.html">Página Inicial</a>
         <a href="./ctrl-estoque.html">Controle de Estoque</a>
         <a href="./add-produto.html">Adicionar Produto</a>
@@ -20,8 +22,8 @@
 
     <h2>Controle de Estoque</h2>
 
-    <table style="border: 2px; color: black;">
-        <tr>
+    <table id="tbProduto">
+        <tr id="tbProdutoColumn">
             <th>Foto</th>
             <th>Descrição</th>
             <th>Preço (R$)</th>
@@ -29,28 +31,37 @@
         </tr>
 
         <tr>
-            <td><img src="./img/Camiseta.jpg" alt="Camiseta" style="width: 100px;" /></td>
+            <td>
+                <img class="produtoImg" src="./img/Camiseta.jpg" alt="Camiseta"/>
+                <img class="produtoImg" src="./img/Bermuda.jpg" alt="Bermuda" style="display: none;"/>
+                <img class="produtoImg" src="./img/Oculos.jpg" alt="Oculos" style="display: none;" />
+                <img class="produtoImg" src="./img/Headset.jpg" alt="Headset" style="display: none;" />
+                
+                <button class="btn-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="btn-right" onclick="plusDivs(1)">&#10095;</button>
+            </td>
+
             <td>Camiseta</td>
             <td>25,00</td>
             <td>10</td>
         </tr>
 
         <tr>
-            <td><img src="./img/Bermuda.jpg" alt="Bermuda" style="width: 100px;"/></td>
+            <td><img class="produtoImg2" src="./img/Bermuda.jpg" alt="Bermuda"/></td>
             <td>Bermuda</td>
             <td>50,00</td>
             <td>100</td>
         </tr>
 
         <tr>
-            <td><img src="./img/Oculos.jpg" alt="Oculos" style="width: 100px;" /></td>
+            <td><img class="produtoImg2" src="./img/Oculos.jpg" alt="Oculos"/></td>
             <td>Oculos</td>
             <td>510,00</td>
             <td>90</td>
         </tr>
 
         <tr>
-            <td><img src="./img/Headset.jpg" alt="Headset" style="width: 100px;" /></td>
+            <td><img class="produtoImg2" src="./img/Headset.jpg" alt="Headset"/></td>
             <td>Headset</td>
             <td>150,00</td>
             <td>10</td>
@@ -59,7 +70,7 @@
         <!-- Crie mais uma linha desta tabela abaixo \/ -->
         
         <tr>
-            <td><img src="./img/Fone.jpg" alt="Fone" style="width: 100px;" /></td>
+            <td><img class="produtoImg2" src="./img/Fone.jpg" alt="Fone"/></td>
             <td>Fone</td>
             <td>15,00</td>
             <td>33</td>
@@ -67,5 +78,26 @@
 
     </table>
 
+    <footer id="footer"></footer>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+        debugger
+          var i;
+          var x = document.getElementsByClassName("produtoImg");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+    </script>
 </body>
 </html>

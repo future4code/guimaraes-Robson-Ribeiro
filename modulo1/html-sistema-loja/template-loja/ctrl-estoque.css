@@ -1,0 +1,46 @@
+*{
+    background-color: white;
+}
+
+#divTitulo{
+    margin: 10px 10px;
+    font-size: 25px;
+}
+
+#tbProduto{
+    /* border: 8mm solid grey; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    background-color: white;
+}
+
+#tbProdutoColumn th{
+    border: 1px solid black;
+    width: auto;
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+
+#tbProduto tr td{
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;    
+}
+
+.btn-left{
+    float: left;
+}
+
+.btn-right{
+    float: right; 
+}
+
+.produtoImg{
+    width: 100px;
+}
+
+.produtoImg2{
+    width: 100px;
+}
