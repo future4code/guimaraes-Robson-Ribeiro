@@ -68,11 +68,18 @@ div img {
 
 #container-de-descricao {
     background-color: #2274a5;
-    color: white;
+    color: white; 
+    padding-top: 30px;
+    list-style-position: inside;   
 }
 
-#container-de-descricao>ol {
+
+#container-de-descricao > ol {
     padding: 15px 0px;
+}
+
+#container-de-descricao > p {
+    text-align: center;
 }
 
 #container-para-comprar {
