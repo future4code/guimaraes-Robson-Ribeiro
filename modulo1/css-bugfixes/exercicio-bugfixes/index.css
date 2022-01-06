@@ -71,6 +71,7 @@ div img {
     color: white; 
     padding-top: 30px;
     list-style-position: inside;   
+    text-align: center;
 }
 
 
@@ -79,7 +80,8 @@ div img {
 }
 
 #container-de-descricao > p {
-    text-align: center;
+    margin: auto;
+    width: 190px;
 }
 
 #container-para-comprar {
@@ -92,6 +94,10 @@ div img {
     font-size: 60px;
 }
 
+.container {
+    height: 500px;
+    text-align: center;
+}
 
 /**
   *
