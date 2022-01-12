@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    background-color: mediumvioletred;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 30px;
+}
+
+input{
+    height: 20px;
+    width: 100px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: mediumvioletred;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;    
+}
+
+footer > p{
+    font-size: 16px;
+    padding-top: calc((60px - 16px) / 2);
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 100px;
+    row-gap: 1px;
+    column-gap: 3px;
+    margin-left: 30px;    
+    
+}
+
+.movieDimension{
+    width: 280px;
+    height: 200px;
+}
