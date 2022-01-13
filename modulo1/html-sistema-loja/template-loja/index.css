@@ -1,16 +1,33 @@
+.myHead{
+   /* margin: 2px 2px; */
+   width: 1500px;
+   height: 100px;
+   background-color: black;
+}
 
-#sejaBenvindo{
+.myHead h1{
+    width: 20%;
     text-align: center;
     color: white;
-    font-size: 25px;            
+    border: solid springgreen;
+    position: absolute;
+    left: calc(50% - 10%);
+    left: -webkit-calc(50% - 10%);
 }
 
-#divRedeSociais{
+.myHead p{
+    width: 20%;
     text-align: center;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border:solid blueviolet;  
+    position: absolute;
+    top: 60px;
+    left: calc(50% - 10%);  
+    left: -webkit-calc(50% - 10%);
 }
 
-#divRedes img{
-    width: 50px;
-}
-
-
+.menu{
+    
+};
