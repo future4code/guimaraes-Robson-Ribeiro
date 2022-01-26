@@ -5,7 +5,7 @@
 
 header{
     display: flex;
-    background-color: mediumvioletred;
+    background-color: grey;
     justify-content: space-between;
     align-items: center;
     height: 60px;
@@ -21,7 +21,7 @@ footer{
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color: mediumvioletred;
+    background-color: grey;
     height: 60px;
     position: fixed;
     bottom: 0;
@@ -47,4 +47,26 @@ main{
 .movieDimension{
     width: 280px;
     height: 200px;
+}
+
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /*celulares  */
+    main{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 800px) {
+    /* tablets */
+    main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-device-width: 800px) and (max-device-width: 1200px) {
+    /* computadores */
+    main{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
