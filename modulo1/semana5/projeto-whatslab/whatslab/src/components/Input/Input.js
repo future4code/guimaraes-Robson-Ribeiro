@@ -1,20 +1,15 @@
 import React from "react";
 
+import * as GS from '../utils/styles/globalStyles';
 
  class Input extends React.Component{
-
     render(){
-        
-        const mystyle = {
-            width: this.props.width,
-            height: this.props.height
-          };
-
-
         return(
-            <input type="text" 
+            <GS.Input type="text" 
                 placeholder={this.props.placeholder} 
-                style={mystyle}
+                width={this.props.width}
+                height={this.props.height}
+                onChange={this.props.onChange}
             />
         );
     }

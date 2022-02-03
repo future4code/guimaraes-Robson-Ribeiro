@@ -1,13 +1,13 @@
 import React from "react";
 
+import * as GS from '../utils/styles/globalStyles';
 
  class Button extends React.Component{
-
     render(){
         return(
-            <button onClick={this.props.handleEnviar}>
+            <GS.Button onClick={this.props.onClick} width={this.props.width} height={this.props.height} >
                 {this.props.children}
-            </button>
+            </GS.Button>
         );
     }
 }
