@@ -38,12 +38,10 @@ class App extends React.Component {
   }
 
   getTarefaLocalStorage = () => {
-    const tarefas = localStorage.getItem('tarefas');
-    
+    const tarefas = localStorage.getItem('tarefas');    
     if(tarefas){
       this.setState({ tarefas: JSON.parse(tarefas) });
-    }
-    
+    }    
   }
 
   onChangeInput = (event) => {
@@ -74,9 +72,7 @@ class App extends React.Component {
         }else{
           return tarefa;
         }
-      }
-      );
-
+    })
       this.setState({tarefas:  novaListaTarefa});
   }
 
