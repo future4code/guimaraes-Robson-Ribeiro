@@ -1,4 +1,4 @@
-# Projeto LABENUSERS -->
+# Projeto LABENUSERS
 
 API [Labenusers](https://documenter.getpostman.com/view/7549981/SzfCT5G2?version=latest).
 
