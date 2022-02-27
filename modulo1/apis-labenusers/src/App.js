@@ -120,7 +120,7 @@ class App extends React.Component {
               <S.Separetor />
 
               <S.Title>Lista de Usuários Cadastrados</S.Title>
-
+              
               <S.Separetor />
               
               <S.Grid className="lista-users">

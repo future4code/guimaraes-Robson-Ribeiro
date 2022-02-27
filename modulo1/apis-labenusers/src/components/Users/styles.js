@@ -8,7 +8,7 @@ export const Container = styled.div`
     align-items: center;
     padding: 11px 0;
 
-    height: 300px;
+    max-height: 600px;
 
     overflow-y: scroll;
 
