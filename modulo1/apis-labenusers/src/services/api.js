@@ -26,3 +26,11 @@ export const createUser = ( nameUser, emailUser ) => {
   return res;
 }
 
+export const deleteUser = (id) => {
+  const res = axios.delete(`${API_ENDPOINT}/${id}`, headers)
+  .then((data) => { return data })
+  .catch((error) => { return error.response});
+
+  return res;
+}
+

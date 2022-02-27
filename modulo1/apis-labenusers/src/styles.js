@@ -57,7 +57,7 @@ export const Input = styled.input`
     border-radius: 5px;
 `;
 
-export const Sepador = styled.hr`
+export const Separetor = styled.hr`
     width: auto;
     margin: 20px 30px;
 `;
@@ -71,25 +71,46 @@ export const Title = styled.h2`
     
 `;
 
-//ID, NM, IC
-export const ListUser = styled.div`
+//ID Icon Id, 
+//NM Nome, 
+//IC Icon Excluir
+//UL Lista de Usuário
+export const Grid = styled.div`
     border: 1px solid black;
 
     display: grid;
-    grid-template-columns: 10% auto 15%;
-    grid-template-rows: 100%;
 
-    grid-area: 'ID NM IC';
+    grid-template-columns: 80px auto 80px;
+    grid-template-rows: 46px;
 
-    width: auto;
-    height: 100%;
-
+    grid-template-areas: 
+    'ID NM IC'
+    'UL UL UL';
+    
     margin: 0px 30px 20px 30px;
-
     border-radius: 5px;
+    height: 100vh;
+    
 `;
 
-export const TextColumn = styled.h3`
+export const TextColumnId = styled.h3`
+    grid-area: ID;
     display: flex;
-    margin: 5px;
+    text-align: center;
+    align-items: center;
+
 `;
+
+export const TextColumnName = styled.h3`
+    grid-area: NM;
+    display: flex;
+    text-align: center;
+    align-items: center;
+`;
+export const TextColumnExcluir = styled.h3`
+    grid-area: IC;
+    display: flex;
+    text-align: center;
+    align-items: center;
+`;
+
