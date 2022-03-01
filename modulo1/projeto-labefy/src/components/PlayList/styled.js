@@ -22,6 +22,12 @@ export const ContainerPlayListAdd = styled.div`
     margin-bottom: 2px;
     border-bottom: 2px;
     border-color: var(--Snow);
+
+    /* @media screen and (min-device-width : 1450px){
+        text-align: start;
+        align-items: flex-start;
+        justify-content: flex-start;
+    } */
 `;
 
 export const ContainerPlayListDetails = styled.div`

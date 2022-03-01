@@ -14,25 +14,50 @@ class Layout extends React.Component{
 
     state = {
         inputPlaylist: '',
-        isUpdatePlayList: false
+        isUpdatePlayList: false,
+        playlist: []
     }
 
     handleCreatePlaylist = () => {
         const { inputPlaylist } = this.state;
-        console.log("body", this.state.inputPlaylist)
+        // console.log("layout createplaylist: ", this.state.inputPlaylist);
+
+        if( inputPlaylist === '' ) return alert("É necessário informar o nome da playlist")
         api.createPlaylists(inputPlaylist)
-        .then((response) => { 
-            if(response.status === 200 || response.status === 201){
+        .then((data) => { 
+            // console.log("data:", data)
+            if(data.status === 200 || data.status === 201){
                 this.setState({ inputPlaylist: '', isUpdatePlayList: true })
-            }           
+                this.getAllPlaylists();
+            } 
         })
-        .catch((error) => {console.log("createplaylist erro: ", error ) });
+        .catch((erro) => {
+            // console.log("Component layout: ", erro.response )
+            if(erro.response.status === 400 ){
+                return alert("Playlist já cadastrada")
+            }
+
+            return alert("Status code não tratado:"+erro.response.status)
+            });
     }
 
     handleOnChangePlayListAdd = (e) => this.setState({ inputPlaylist: e.target.value })
 
-    handleUpdatePlayList = (isUpdate) => {
-        this.setState({ isUpdatePlayList: isUpdate })
+    handleUpdatePlayList = (playlistUpdate) => {
+        this.setState({ playlist: playlistUpdate })
+    }
+
+    getAllPlaylists = () => {
+        api.getAllPlaylists()
+        .then((response) => {
+            console.log("layout: ",response)
+            this.setState({ playlist: response.result.list }) 
+        })
+        .catch((error) => {return error } ) 
+    }
+
+    componentDidMount(){
+        this.getAllPlaylists();
     }
 
     render(){
@@ -45,7 +70,7 @@ class Layout extends React.Component{
                 />
                 <PlayList 
                     handleUpdatePlayList={this.handleUpdatePlayList}
-                    isUpdate={this.state.isUpdatePlayList}
+                    playlist={this.state.playlist}
                 />
             </Grid>
         )

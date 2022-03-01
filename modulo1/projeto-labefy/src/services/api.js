@@ -22,7 +22,7 @@ const api = {
 
     getPlayListTracks: ( idPlaylist ) => {
         const url = `playlists/${idPlaylist}/tracks`
-        return apiClient.get(url, {params: {}});
+        return apiClient.get(url);
     },
 
     addTrackToPlaylist: ( name, artist, urlMusic, idPlaylist ) => {

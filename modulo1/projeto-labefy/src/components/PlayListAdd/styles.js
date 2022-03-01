@@ -8,6 +8,7 @@ export const Container = styled.div`
     justify-content: space-between;
     background-color: var(--grey11);
 
+ 
     /* border: 2px solid white; */
 `;
 

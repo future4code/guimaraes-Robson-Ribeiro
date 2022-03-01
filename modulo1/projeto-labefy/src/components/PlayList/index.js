@@ -25,16 +25,11 @@ class PlayList extends React.Component{
         inputURL: '',
         playlistSelectedId: '',
         playlistSelected: '',
-        playlist: [],
         playlistTracks: [],
         inputPlaylist: '',
         urlPlaying: '',
-        isUpdatePlayList: this.props.isUpdate,
     }
     
-    componentDidMount(){
-        this.getAllPlaylists();
-    }
 
     handlePlayingPause = (isPlaying, url ) => {
         this.setState({ isPlaying: isPlaying, urlPlaying: url })
@@ -59,11 +54,11 @@ class PlayList extends React.Component{
         if(inputMusic != '' && inputArtista != '' && inputURL != ''){
             api.addTrackToPlaylist(inputMusic, inputArtista, inputURL, idPlalistTrack  )
             .then((response) => {
+                console.log("Playlist add",response)
                 this.handlePLaylistTracks(idPlalistTrack);
+                this.setState({ inputMusic: '', inputArtista: '', inputURL: '' });
             })
             .catch((error) => { console.log("track add error: ", error )})
-
-            this.setState({ inputMusic: '', inputArtista: '', inputURL: '' });
         }
 
         if(inputMusic === '' || inputArtista === '' || inputURL === '') return alert("É necessário informar os dados da playlist")
@@ -73,7 +68,7 @@ class PlayList extends React.Component{
         api.deletePlaylist(idPlaylist)
         .then((response) => {
             if(response.status === 200 || response.status === 201){
-                this.props.handleUpdatePlayList(true);
+               this.getAllPlaylists();
             }            
         })
         .catch((error) =>console.log("delete error:", error));
@@ -100,20 +95,16 @@ class PlayList extends React.Component{
     getAllPlaylists = () => {
         api.getAllPlaylists()
         .then((response) => {
-            this.setState({ playlist: response.result.list }) 
+            this.props.handleUpdatePlayList(response.result.list); 
         })
         .catch((error) => {return error } ) 
     }
 
     render(){
-        const isUpdate = this.props.isUpdate;
-        if(isUpdate === true){
-            this.getAllPlaylists();
-        }
 
         return(<>            
             <ContainerPlayList className="main-playlist-container">
-                { this.state.playlist.map((list, index) => {
+                { this.props.playlist.map((list, index) => {
                     return   <PlayListInfo  key={index}
                     handlePlayList={this.handlePlayList} 
                     handleDeletePlayList={this.handleDeletePlayList}
