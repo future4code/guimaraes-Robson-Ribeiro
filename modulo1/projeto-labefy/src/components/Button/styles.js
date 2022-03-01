@@ -26,6 +26,10 @@ export const Button = styled.button`
     background-color: var(--Snow);
     color: var(--Black);
 
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+
     :hover{
         width: 135px;
     }

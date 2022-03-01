@@ -18,28 +18,36 @@ import {
 
 class PlayListAdd extends React.Component{
     render(){
-        return(<Container>
-                
+        return(<Container>                
             <PlaylisInfoContainer>
             <PlayListInfo>
-                <span>Playlist: Pagode</span>
+                <span>{this.props.playlist? this.props.playlist : 'Selecionar uma playlist'}</span>
                 <PlayListInfoData>
-                    <label>Nome: </label>
-                    <Input />
+                    <label>Musica: </label>
+                    <Input 
+                        value={this.props.state.inputMusic}
+                        onChange={this.props.handleOnChangeMusic}
+                    />
                 </PlayListInfoData> 
                 <PlayListInfoData>
                     <label>Artista: </label>
-                    <Input />
+                    <Input 
+                        value={this.props.state.inputArtista}
+                        onChange={this.props.handleOnChangeArtista}
+                    />
                 </PlayListInfoData>
                 <PlayListInfoData>
                     <label>URL: </label>
-                    <Input />
+                    <Input 
+                        value={this.props.state.inputURL}
+                        onChange={this.props.handleOnChangeURL}
+                    />
                 </PlayListInfoData>
             </PlayListInfo>
             </PlaylisInfoContainer>
         
             <PlayListInfoAdd>
-                <Button>
+                <Button onClick={this.props.handleAddPlayList}>
                     <IconInfo>     
                         Salvar                   
                         {/* <IconAdd /> */}

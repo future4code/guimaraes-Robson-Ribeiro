@@ -20,8 +20,8 @@ class PlayListInfo extends React.Component{
                 <List className={`main-playlist-info-container-category`}>
                     <PlayListData className="category-playlistdata">
                         <PlayListIcon />
-                        <ListTitle 
-                            className={`main-playlist-info-container-category-${this.props.playlist}`}
+                        <ListTitle onClick={() => this.props.handlePlayList(this.props.idPlaylist, this.props?.playlist)}
+                            className={`main-playlist-info-container-category-${this.props?.playlist}`}
                         >   {this.props.playlist}
                         </ListTitle> 
                      </PlayListData>

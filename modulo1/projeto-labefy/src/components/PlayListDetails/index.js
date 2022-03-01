@@ -34,12 +34,10 @@ class PlayListDetails extends React.Component{
 
                 <CardPlayInfo>
                     <CardPlay>
-                        {/* <Button width={'80px'} ><Play /></Button> */}
-                        <Play />
+                        <Play onClick={this.props.handlePlaying}/>
                     </CardPlay>
                     <CardPlay>
-                        {/* <Button width={'80px'}  ><Pause /></Button> */}
-                        <Pause />
+                        <Pause onClick={this.props.handlePause} />
                     </CardPlay>
                 </CardPlayInfo>
                 
