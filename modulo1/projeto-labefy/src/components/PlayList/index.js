@@ -4,11 +4,14 @@ import React from "react";
 import PlayListInfo from "../PlayListInfo";
 import PlayListAdd from "../PlayListAdd";
 import PlayListDetails from "../PlayListDetails";
+import PlayListPlay from "../PlayListPlay";
+
 //css
 import { 
     ContainerPlayList, 
     ContainerPlayListAdd,
-    ContainerPlayListDetails
+    ContainerPlayListDetails,
+    ContainerPlayListPlay
 } from './styled';
 
 
@@ -24,15 +27,19 @@ class PlayList extends React.Component{
                 <PlayListInfo playlist={'Romance'} />
             </ContainerPlayList>
 
-            <ContainerPlayListAdd className="mai-playlist-container-add">
+            <ContainerPlayListAdd className="main-playlist-container-add">
                 <PlayListAdd />
             </ContainerPlayListAdd>
 
-            <ContainerPlayListDetails>
+            <ContainerPlayListDetails className="main-playlist-container-details">
                 <PlayListDetails />
                 <PlayListDetails />
                 <PlayListDetails />                 
             </ContainerPlayListDetails>
+
+            <ContainerPlayListPlay>
+                <PlayListPlay />
+            </ContainerPlayListPlay>
 
             
 

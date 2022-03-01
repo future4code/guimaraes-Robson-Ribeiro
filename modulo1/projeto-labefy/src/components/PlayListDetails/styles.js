@@ -1,4 +1,7 @@
 import styled from "styled-components";
+//icons
+import { FaPlay } from 'react-icons/fa';
+import { IoMdPause } from 'react-icons/io'
 
 export const Container = styled.div`
     display: flex;
@@ -68,7 +71,7 @@ export const CardPlayInfo = styled.div`
     justify-content: space-between;
 
     margin: 5px 20px;
-    width: 300px;
+    width: 70px;
     /* border: 1px solid yellowgreen; */
 `;
 
@@ -79,4 +82,27 @@ export const Label = styled.h4`
 export const LabelInfo = styled.span`
     display: flex;
     /* position: absolute; */
+`;
+
+export const Play = styled(FaPlay)`
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    
+    :hover{
+        width: 35px;
+        height: 35px;
+    }
+`;
+
+export const Pause = styled(IoMdPause)`
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    :hover{
+        width: 35px;
+        height: 35px;
+    }
+
 `;

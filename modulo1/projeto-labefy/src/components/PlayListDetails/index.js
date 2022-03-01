@@ -13,12 +13,13 @@ import {
     CardPlayInfo,
     CardInfo,
     Label,
-    LabelInfo
+    Play,
+    Pause
 } from './styles';
 
 class PlayListDetails extends React.Component{
     render(){
-        return(<Container>
+        return(<Container className="playlist-details-container">
             <PlayListCard>
                 <CardInfo>
                     <CardPhoto>
@@ -33,10 +34,12 @@ class PlayListDetails extends React.Component{
 
                 <CardPlayInfo>
                     <CardPlay>
-                        <Button>play</Button>
+                        {/* <Button width={'80px'} ><Play /></Button> */}
+                        <Play />
                     </CardPlay>
                     <CardPlay>
-                        <Button>Pause</Button>
+                        {/* <Button width={'80px'}  ><Pause /></Button> */}
+                        <Pause />
                     </CardPlay>
                 </CardPlayInfo>
                 

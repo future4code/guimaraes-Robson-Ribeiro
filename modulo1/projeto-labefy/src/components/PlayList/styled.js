@@ -31,3 +31,11 @@ export const ContainerPlayListDetails = styled.div`
         display: none;
     } */
 `;
+
+export const ContainerPlayListPlay = styled.div`
+    display: flex;
+    flex-direction: column;
+    grid-area: PP;
+
+    color: var(--Snow);
+`;

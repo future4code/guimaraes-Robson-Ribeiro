@@ -18,9 +18,12 @@ class PlayListInfo extends React.Component{
     render(){
         return(<Container className="main-playlist-info-container">
                 <List className={`main-playlist-info-container-category`}>
-                    <PlayListData>
+                    <PlayListData className="category-playlistdata">
                         <PlayListIcon />
-                        <ListTitle className={`main-playlist-info-container-category-${this.props.playlist}`}>{this.props.playlist}</ListTitle> 
+                        <ListTitle 
+                            className={`main-playlist-info-container-category-${this.props.playlist}`}
+                        >   {this.props.playlist}
+                        </ListTitle> 
                      </PlayListData>
                 </List>
                 <Icons>

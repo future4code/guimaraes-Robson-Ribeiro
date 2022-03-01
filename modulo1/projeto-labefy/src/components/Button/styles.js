@@ -19,9 +19,9 @@ export const Button = styled.button`
     justify-content: center;
 
     height: 40px;
-    width: 130px;
+    width: ${ props => props.width? props.width : '130px'}; //130px;
 
-    border-radius: 500px;
+    border-radius: ${ props => props.radius? props.radius : '500px'}; ;
 
     background-color: var(--Snow);
     color: var(--Black);
