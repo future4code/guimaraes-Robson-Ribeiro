@@ -13,7 +13,7 @@ export const Grid = styled.div`
     display: grid;
 
     grid-template-columns: 200px auto;
-    grid-template-rows: 100px 200px 230px auto;
+    grid-template-rows: 100px 200px 120px auto;
 
     grid-template-areas: 
     'LG HE'

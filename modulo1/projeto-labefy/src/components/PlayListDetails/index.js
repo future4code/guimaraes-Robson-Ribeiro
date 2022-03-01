@@ -2,6 +2,7 @@ import React from "react";
 
 //components
 import Button from "../Button";
+import MidiaPlayer from "../MidiaPlayer";
 
 //css
 import { 
@@ -14,36 +15,42 @@ import {
     CardInfo,
     Label,
     Play,
-    Pause
+    Pause,
+    Delete
 } from './styles';
 
 class PlayListDetails extends React.Component{
     render(){
-        return(<Container className="playlist-details-container">
-            <PlayListCard>
-                <CardInfo>
-                    <CardPhoto>
-                        <span>Foto</span>
-                    </CardPhoto>
+        return(<>
+            <Container className="playlist-details-container">
+                <PlayListCard>
+                    <CardInfo>
+                        <CardPhoto>
+                            <span>Foto</span>
+                        </CardPhoto>
 
-                    <CardDetails>
-                        <Label>Musica: Dona Maria</Label>
-                        <Label>Artista: Thiago Ventura</Label> 
-                    </CardDetails>
-                </CardInfo>
+                        <CardDetails>
+                            <Label>Musica: {this.props.name}</Label>
+                            <Label>Artista: {this.props.artista}</Label> 
+                        </CardDetails>
+                    </CardInfo>
 
-                <CardPlayInfo>
-                    <CardPlay>
-                        <Play onClick={this.props.handlePlaying}/>
-                    </CardPlay>
-                    <CardPlay>
-                        <Pause onClick={this.props.handlePause} />
-                    </CardPlay>
-                </CardPlayInfo>
-                
-            </PlayListCard>
-        </Container>
-        )
+                    <CardPlayInfo>
+                        <CardPlay>
+                            <Play onClick={this.props.handlePlaying}/>
+                        </CardPlay>
+                        <CardPlay>
+                            <Pause onClick={this.props.handlePause} />
+                        </CardPlay>
+                        <CardPlay>
+                            <Delete onClick={this.props.handleRemoveTrackFormPlaylist} />
+                        </CardPlay>
+                        
+                    </CardPlayInfo>
+                    
+                </PlayListCard>
+            </Container>
+        </>)
     }
 }
 

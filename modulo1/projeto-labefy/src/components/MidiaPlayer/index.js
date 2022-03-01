@@ -10,7 +10,7 @@ class MidiaPlayer extends React.Component{
     render(){
         return(<Container>
             <ReactPlayer 
-                url={'https://www.youtube.com/watch?v=qaPDDTLkB2U'} 
+                url={this.props.url} 
                 width={'100%'}
                 height={'100%'}
                 playing={this.props.playPause}

@@ -18,6 +18,10 @@ export const ContainerPlayListAdd = styled.div`
     display: flex;
     
     grid-area: PA;
+
+    margin-bottom: 2px;
+    border-bottom: 2px;
+    border-color: var(--Snow);
 `;
 
 export const ContainerPlayListDetails = styled.div`
@@ -26,6 +30,11 @@ export const ContainerPlayListDetails = styled.div`
     grid-area: PD;
 
     overflow-y: auto;
+    background-color: var(--grey11);
+
+    /* margin-bottom: 2px;
+    border-bottom: 2px;
+    border-color: var(--Snow); */
 
     /* ::-webkit-scrollbar{
         display: none;

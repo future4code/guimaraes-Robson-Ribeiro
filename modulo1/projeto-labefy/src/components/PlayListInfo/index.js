@@ -27,8 +27,8 @@ class PlayListInfo extends React.Component{
                      </PlayListData>
                 </List>
                 <Icons>
-                    <IconAdd />
-                    <IconDelete />
+                    <IconAdd onClick={() => this.props.handlePlayList(this.props.idPlaylist, this.props?.playlist)}/>
+                    <IconDelete onClick={() => this.props.handleDeletePlayList(this.props.idPlaylist)}/>
                 </Icons>
         </Container>)
     }

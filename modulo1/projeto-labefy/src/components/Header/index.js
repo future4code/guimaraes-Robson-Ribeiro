@@ -16,8 +16,16 @@ class Header extends React.Component{
             </Logo> 
 
             <Container className="layout-header">
-                <Input className="header-input-playlist" placeholder="Informe aqui o nome da sua playlist" />
-                <Button className="header-btn-salvar">Salvar</Button>
+                <Input 
+                    value={this.props.state.inputPlaylist}
+                    className="header-input-playlist" 
+                    placeholder="Informe aqui o nome da sua playlist" 
+                    onChange={this.props.handleOnChangePlayListAdd}
+                />
+                <Button 
+                    className="header-btn-salvar" 
+                    onClick={this.props.handleCreatePlaylist}
+                    >Salvar</Button>
             </Container>
         </>)
     }

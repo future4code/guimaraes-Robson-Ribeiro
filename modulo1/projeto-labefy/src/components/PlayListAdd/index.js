@@ -50,7 +50,6 @@ class PlayListAdd extends React.Component{
                 <Button onClick={this.props.handleAddPlayList}>
                     <IconInfo>     
                         Salvar                   
-                        {/* <IconAdd /> */}
                     </IconInfo>
 
                 </Button>
