@@ -1,6 +1,13 @@
 import React from "react";
-import { GlobalStyle } from "./styles/GlobalStyles";
+
+
+//components
 import Layout from "./components/Layout";
+
+//css
+import { GlobalStyle } from "./styles/GlobalStyles";
+
+
 
 
 class App extends React.Component{

@@ -1,5 +1,4 @@
 import apiClient from "./apiClient";
-import apiConfig from "./apiConfig";
 
 const api = {
     getAllPlaylists: () => {
