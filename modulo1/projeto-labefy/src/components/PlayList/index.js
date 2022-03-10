@@ -8,6 +8,7 @@ import MidiaPlayer from "../MidiaPlayer";
 
 //api
 import api from "../../services/api";
+
 //css
 import { 
     ContainerPlayList, 
@@ -31,9 +32,7 @@ class PlayList extends React.Component{
     }
     
 
-    handlePlayingPause = (isPlaying, url ) => {
-        this.setState({ isPlaying: isPlaying, urlPlaying: url })
-    } 
+    handlePlayingPause = (isPlaying, url ) => this.setState({ isPlaying: isPlaying, urlPlaying: url })
     
     handlePlayList = ( idPlaylist, playlist ) => {
         this.setState({ playlistSelectedId: idPlaylist, playlistSelected: playlist })

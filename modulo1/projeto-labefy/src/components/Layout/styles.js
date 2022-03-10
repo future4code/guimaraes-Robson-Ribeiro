@@ -12,14 +12,14 @@ import styled from "styled-components";
 export const Grid = styled.div`
     display: grid;
 
-    grid-template-columns: 200px auto;
+    grid-template-columns: 200px 400px auto;
     grid-template-rows: 100px 200px 120px auto;
 
     grid-template-areas: 
-    'LG HE'
-    'PL PA'
-    'PL PD'
-    'PL PP'
+    'LG HE HE'
+    'PL PA PA'
+    'PL PD PP'
+    'PL PD PP'
     ;
 
     height: 100vh;

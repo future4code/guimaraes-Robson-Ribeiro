@@ -20,19 +20,16 @@ class Layout extends React.Component{
 
     handleCreatePlaylist = () => {
         const { inputPlaylist } = this.state;
-        // console.log("layout createplaylist: ", this.state.inputPlaylist);
-
+ 
         if( inputPlaylist === '' ) return alert("É necessário informar o nome da playlist")
         api.createPlaylists(inputPlaylist)
         .then((data) => { 
-            // console.log("data:", data)
             if(data.status === 200 || data.status === 201){
                 this.setState({ inputPlaylist: '', isUpdatePlayList: true })
                 this.getAllPlaylists();
             } 
         })
         .catch((erro) => {
-            // console.log("Component layout: ", erro.response )
             if(erro.response.status === 400 ){
                 return alert("Playlist já cadastrada")
             }
@@ -50,7 +47,6 @@ class Layout extends React.Component{
     getAllPlaylists = () => {
         api.getAllPlaylists()
         .then((response) => {
-            console.log("layout: ",response)
             this.setState({ playlist: response.result.list }) 
         })
         .catch((error) => {return error } ) 

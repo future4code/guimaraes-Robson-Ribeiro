@@ -14,7 +14,7 @@ export const PlayListCard = styled.div`
     /* text-align: center; */
     /* align-items: center; */
     justify-content: space-between;
-    width: 100%;
+    width: 98%;
 
     color: var(--Snow);
     background-color: var(--grey11);
@@ -52,6 +52,7 @@ export const CardDetails = styled.div`
     margin: 5px 0px;
 
     padding-left: 10px;
+
 `;
 
 export const CardPlay = styled.div`
@@ -66,7 +67,7 @@ export const CardPlay = styled.div`
 
 export const CardInfo = styled.div`
     display: flex;
-    min-width: 400px;
+    min-width: 100px;
 `;
 
 export const CardPlayInfo = styled.div`
@@ -80,6 +81,13 @@ export const CardPlayInfo = styled.div`
 
 export const Label = styled.h4`
     display: flex;
+
+    p{
+        width: 200px;
+        font-weight: normal;
+        padding-left: 5px;
+        /* white-space: nowrap; */
+    }
 `;
 
 export const LabelInfo = styled.span`

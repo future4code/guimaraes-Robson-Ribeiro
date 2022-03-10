@@ -20,9 +20,14 @@ export const Logo = styled.div`
     background-color: var(--Black);
     text-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
     color: white;
+
+    .spotify{
+        cursor: pointer;
+    }
+
 `;
 
 export const StylesSpotify = styled.div`
