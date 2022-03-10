@@ -7,7 +7,17 @@ import Button from "../Button";
 import api from "../../services/api";
 
 //css
-import { SpotifyContainer, SpotifySair, Playlist } from './styles';
+import { 
+    SpotifyContainer, 
+    Playlist, 
+    PlaylistItem,
+    CardPlayInfo,
+    CardPlay,
+    Add,
+    Item,
+    Sair
+ } 
+from './styles';
 
 class SpotifyPlaylist extends React.Component {
     
@@ -16,23 +26,33 @@ class SpotifyPlaylist extends React.Component {
     }
 
     render(){
-        return(
+        return(<>
             <SpotifyContainer className="spotify-container">
                 
                 <Playlist className="spotify-playlist">
-                    <ul>
-                        {this.props.spotifyPlaylist.map((playlist, index) => {
-                            return <li key={playlist.id}>{playlist.name}</li>
+                        {this.props.spotifyPlaylist.map((playlist) => {
+                            return (
+                                <PlaylistItem key={playlist.id}>
+                                    <Item>
+                                        <h4 >{playlist.name}</h4>
+                                    </Item>
+
+                                    <CardPlayInfo>
+                                        <CardPlay >
+                                            <Add />
+                                        </CardPlay>
+                                    </CardPlayInfo>
+                                </PlaylistItem>
+                            ) 
                         })}
-                    </ul>
                 </Playlist>
+                        
+                         
                 
-
-            {/* <SpotifySair>
-                <Button>Sair</Button>
-            </SpotifySair> */}
-
+                <Sair><Button>Sair</Button></Sair>
             </SpotifyContainer>
+                
+            </>
         )
     }
 }
