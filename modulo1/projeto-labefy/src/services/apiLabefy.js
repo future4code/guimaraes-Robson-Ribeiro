@@ -3,15 +3,15 @@ import queryString from 'query-string';
 
 import apiConfig from './apiConfig';
 
-const apiClient = axios.create({
-    baseURL: apiConfig.baseURL,
-    headers: apiConfig.headers,
+const apiLabefy = axios.create({
+    baseURL: apiConfig.labefy.baseURL,
+    headers: apiConfig.labefy.headers,
     paramsSerializer: params => queryString.stringify({...params })
 });
 
-apiClient.interceptors.request.use(async (config) => config);
+apiLabefy.interceptors.request.use(async (config) => config);
 
-apiClient.interceptors.response.use((response) => {
+apiLabefy.interceptors.response.use((response) => {
     if (response && response.data) {
         return response.data;
     }
@@ -21,4 +21,4 @@ apiClient.interceptors.response.use((response) => {
     throw error;
 });
 
-export default apiClient;
+export default apiLabefy;

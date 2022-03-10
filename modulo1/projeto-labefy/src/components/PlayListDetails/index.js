@@ -25,13 +25,13 @@ class PlayListDetails extends React.Component{
             <Container className="playlist-details-container">
                 <PlayListCard>
                     <CardInfo>
-                        <CardPhoto>
+                        {/* <CardPhoto>
                             <span>Foto</span>
-                        </CardPhoto>
+                        </CardPhoto> */}
 
                         <CardDetails>
-                            <Label>Musica: {this.props.name}</Label>
-                            <Label>Artista: {this.props.artista}</Label> 
+                            <Label>Musica: <p>{this.props.name} </p></Label>  
+                            <Label>Artista: <p>{this.props.artista}</p> </Label>  
                         </CardDetails>
                     </CardInfo>
 

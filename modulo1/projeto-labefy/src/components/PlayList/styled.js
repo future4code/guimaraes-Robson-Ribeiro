@@ -35,16 +35,17 @@ export const ContainerPlayListDetails = styled.div`
     flex-direction: column;
     grid-area: PD;
 
-    overflow-y: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
     background-color: var(--grey11);
 
     /* margin-bottom: 2px;
     border-bottom: 2px;
     border-color: var(--Snow); */
 
-    /* ::-webkit-scrollbar{
+    ::-webkit-scrollbar{
         display: none;
-    } */
+    }
 `;
 
 export const ContainerPlayListPlay = styled.div`

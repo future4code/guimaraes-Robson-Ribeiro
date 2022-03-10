@@ -1,9 +1,10 @@
-import apiClient from "./apiClient";
+import apiLabefy from "./apiLabefy";
+import apiSpotify from "./apiSpotify";
 
 const api = {
     getAllPlaylists: () => {
         const url = 'playlists';
-        return apiClient.get(url);
+        return apiLabefy.get(url);
     },
 
     createPlaylists: (name) => {
@@ -11,17 +12,17 @@ const api = {
             name: name 
         }
         const url = 'playlists'
-        return apiClient.post(url, body );
+        return apiLabefy.post(url, body );
     },
 
     deletePlaylist: (params) => {
         const url = `playlists/${params}`;
-        return apiClient.delete(url, params);
+        return apiLabefy.delete(url, params);
     },
 
     getPlayListTracks: ( idPlaylist ) => {
         const url = `playlists/${idPlaylist}/tracks`
-        return apiClient.get(url);
+        return apiLabefy.get(url);
     },
 
     addTrackToPlaylist: ( name, artist, urlMusic, idPlaylist ) => {
@@ -32,13 +33,36 @@ const api = {
             url: urlMusic
         }
 
-        return apiClient.post(url, body);
+        return apiLabefy.post(url, body);
     },
 
     removeTrackFromPlaylist: (idPlaylist, idTrackFormPlaylist) => {
         const url = `playlists/${idPlaylist}/tracks/${idTrackFormPlaylist}`
-        return apiClient.delete(url);
+        return apiLabefy.delete(url);
+    },
+
+    spotify:{
+        getCurrentUserProfile: ( token ) => {
+            const url = `me`
+            return apiSpotify.get(url, mountHeader(token) );
+        },
+
+        getCurrentUserPlaylists: ( token ) => {
+            const url = `me/playlists`
+            return apiSpotify.get(url, mountHeader(token) );
+        }
     }
+}
+
+const mountHeader = ( token ) => {
+    const headers = {
+        headers:{
+            Authorization: 'Bearer '+token,
+            'Content-Type': 'application/json'
+        }       
+    }
+
+    return headers;
 }
 
 export default api;
