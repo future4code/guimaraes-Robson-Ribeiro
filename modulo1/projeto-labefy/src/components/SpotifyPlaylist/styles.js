@@ -9,8 +9,9 @@ export const SpotifyContainer = styled.div`
     flex-direction: column;
 
     grid-template-columns: 100%;
-    grid-template-rows: 500px 100px;
-    grid-template-areas: 'LI BT';
+    grid-template-rows: 530px 70px;
+    grid-template-areas: 'LI'
+    'BT';
 
 
     position: absolute;
@@ -25,6 +26,7 @@ export const SpotifyContainer = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
 `;
 
 export const Playlist = styled.div`
@@ -42,7 +44,7 @@ export const Playlist = styled.div`
         display: none;
     }
 
-    border: 2px solid green;
+    /* border: 2px solid green; */
 
 `;
 
@@ -106,11 +108,15 @@ export const Add = styled(MdPlaylistAdd)`
 
 export const Sair = styled.div`
     display: flex;
-    flex-direction: column;
     grid-area: BT;
 
-    justify-content: end;
-    
-    width: 100px;
-    border: 1px solid yellow;
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+
+    /* border: 1px solid var(--Snow); */
+
+    border-radius: 5px;
+
 `;

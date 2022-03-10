@@ -98,6 +98,7 @@ class Header extends React.Component{
                         handleCreatePlaylist={this.props.handleCreatePlaylist}
                         getPlaylist={() => this.getCurrentUserPlaylists(this.state.token)}
                         spotifyPlaylist={this.state.spotifyPlaylist}
+                        showSpotifyPlaylist={this.showSpotifyPlaylist}
                     />
                 )}
                 

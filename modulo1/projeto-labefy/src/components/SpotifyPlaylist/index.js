@@ -25,6 +25,8 @@ class SpotifyPlaylist extends React.Component {
         this.props.getPlaylist();
     }
 
+
+
     render(){
         return(<>
             <SpotifyContainer className="spotify-container">
@@ -46,10 +48,10 @@ class SpotifyPlaylist extends React.Component {
                             ) 
                         })}
                 </Playlist>
-                        
-                         
-                
-                <Sair><Button>Sair</Button></Sair>
+
+                <Sair>
+                    <Button onClick={() => this.props.showSpotifyPlaylist(false)} >Sair</Button>
+                </Sair>
             </SpotifyContainer>
                 
             </>
