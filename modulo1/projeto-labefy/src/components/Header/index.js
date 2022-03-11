@@ -73,6 +73,10 @@ class Header extends React.Component{
 
     render(){
         const { isAuthentication, showSpotifyPlaylist } = this.state
+
+        const code = new URLSearchParams(window.location.search).get('access_token')
+
+        console.log("code:", code);
         return(<>
             <Logo className="pl-logo">
                 <SiReactos size={50}/>
@@ -88,7 +92,8 @@ class Header extends React.Component{
                         title={'Clique aqui para importa sua playlist'}
 
                         onClick={() => this.showSpotifyPlaylist(true)}
-                        // onMouseLeave={() => this.showSpotifyPlaylist(false)}
+                        //onMouseLeave={() => this.showSpotifyPlaylist(false)}
+                        
                     />
                 )}
 
@@ -99,12 +104,11 @@ class Header extends React.Component{
                         getPlaylist={() => this.getCurrentUserPlaylists(this.state.token)}
                         spotifyPlaylist={this.state.spotifyPlaylist}
                         showSpotifyPlaylist={this.showSpotifyPlaylist}
+
                     />
                 )}
                 
             </Logo> 
-
-            {}
 
             <Container className="layout-header">
                 <StylesSpotify onClick={() => this.handleAuthSpotify(true)}>
