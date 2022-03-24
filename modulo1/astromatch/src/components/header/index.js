@@ -2,14 +2,12 @@ import React, { useState } from "react";
 
 import { IconMetch, Title, IconAdd, Container } from './styles'
 
-const Header = () => {
-    const [isHide, setIsHide] = useState(false);
-
+const Header = ({hide, setIsHide}) => {   
     return(
         <>
-            <IconMetch hide={isHide}/>
+            <IconMetch hide={hide} onClick={() => setIsHide(true)} />
             <Title>Astromatch</Title>
-            <IconAdd />
+            <IconAdd hide={!hide}  onClick={() => setIsHide(false)}/>
         </>
     );
 }

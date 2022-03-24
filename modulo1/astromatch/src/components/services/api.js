@@ -9,7 +9,10 @@ const api = {
             return apiAstromatch.get(url);
         },
 
-        getMatches: () => {},
+        getMatches: () => {
+            const url = `${user}/matches`;
+            return apiAstromatch.get(url);
+        },
         
         ChoosePerson: (id, choice) => {
             const url = `${user}/choose-person`;

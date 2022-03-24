@@ -26,4 +26,6 @@ export const IconAdd = styled(FaUserCheck)`
     grid-area: IC2;
 
     font-size: 50px;
+
+    visibility:  ${props => props.hide === true? 'hidden' : 'visible'};
 `;

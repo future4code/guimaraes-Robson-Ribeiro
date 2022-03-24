@@ -7,7 +7,7 @@ export const Photo = styled.div`
 
     img{
         width: 500px;
-        height: 100%;
+        height: 50%;
 
         border-radius: 2em;
     }
