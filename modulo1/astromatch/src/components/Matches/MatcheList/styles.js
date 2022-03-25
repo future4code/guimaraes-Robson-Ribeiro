@@ -8,8 +8,9 @@ export const Container = styled.div`
     height: 80px;
     width: calc(100% -6px);
 
-    border-radius: 10px;
-
+    border-radius: 30px;
+    /* box-shadow: 1px 1px 2px 5px rgba(228, 207, 207, 0.3); */
+    box-shadow: 30px 30px 60px 5px #bebebe, -20px -20px 30px #ffffff;
     margin: 3px;
 
     align-items: center;
@@ -36,7 +37,8 @@ export const Photo = styled.div`
     img{
         width: 100%;
         height: 100%;
-
+        
+        box-shadow: 1px 1px 2px 5px rgba(228, 207, 207, 0.3);
         border-radius: 500%;
     }
 `;

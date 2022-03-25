@@ -6,15 +6,13 @@ export const Container = styled.div`
 
     grid-area: IMG;
 
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 100%;
-    width: calc(100% - 160px);
-    border-radius: 10px;
-    
+    min-width: calc(100% - 160px);
+    /* border-radius: 10px; */
+
+    box-shadow: 1px 1px 2px 5px rgba(228, 207, 207, 0.3);
+    border-radius: 30px;
+
+    overflow-y: auto;    
 `;
-
-export const Card = styled.div``;
-
-export const Photo = styled.div``;
-
-export const Title = styled.div``;

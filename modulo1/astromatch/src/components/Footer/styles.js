@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import { AiFillDislike, AiFillLike } from 'react-icons/ai'; 
-
 export const Container = styled.div`
     display: flex;
 
@@ -11,26 +9,34 @@ export const Container = styled.div`
 
     justify-content: space-around;
     align-content: space-around;
-`;
 
-export const Like = styled(AiFillLike)`
-    display: flex;
-
-    font-size: 50px;
-
-    :hover{
-        color: blue;
-        cursor: pointer;
+    .replay {
+    background: #fcfafa;
+    box-shadow: 30px 30px 60px 5px #bebebe, -20px -20px 30px #ffffff;
+    color: blue;
     }
-`;
 
-export const DisLike = styled(AiFillDislike)`
-    display: flex;
+    .close {
+    background: #fcfafa;
+    box-shadow: 20px 20px 30px #bebebe, -20px -20px 60px #ffffff;
+    color: red;
+    }
 
-    font-size: 50px;
+    .star {
+    background: rgb(252, 247, 247);
+    box-shadow: 20px 20px 30px #bebebe, -20px -20px 60px #ffffff;
+    color: green;
+    }
 
-    :hover{
-        color: red;
-        cursor: pointer;
+    .fav {
+    background: rgb(252, 247, 247);
+    box-shadow: 20px 20px 30px #bebebe, -20px -20px 60px #ffffff;
+    color: rgb(240, 68, 96);
+    }
+    
+    .flash {
+    background: rgb(252, 247, 247);
+    box-shadow: 20px 20px 30px #bebebe, -20px -20px 60px #ffffff;
+    color: blueviolet;
     }
 `;

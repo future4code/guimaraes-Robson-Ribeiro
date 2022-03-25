@@ -4,14 +4,15 @@ import { Container, Photo, Title } from "./styles";
 
 const MatcheList = ({ photo, name }) => {
 
-    return (<Container className="matche-list">
-        <Photo>
+    return (<Container className="matches-list">
+        <Photo className="photo">
             <img src={photo} alt={'matche'} />
         </Photo>
 
-        <Title>
+        <Title className="name">
             <h3>{name}</h3>
         </Title>
+
     </Container>)
 }
 
