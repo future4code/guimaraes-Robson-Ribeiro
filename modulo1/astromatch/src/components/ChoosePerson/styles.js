@@ -28,8 +28,8 @@ export const Photo = styled.div`
 
         .match-background{
             background-color: #1C1C1C;
-
-            /* margin: 10px; */
+            box-shadow: 30px 30px 60px 5px #bebebe, -20px -20px 30px #ffffff;
+            
             border-radius: 10px;
 
             .info-users{

@@ -20,13 +20,28 @@ export const Grid = styled.div`
     'DIS ICO LIK'
     ;
 
-
     /* border: 1px solid black; */
-
 
     justify-content: center;
     align-content: center;
 
     align-items: center;
     justify-items: center;
+
+
+    @media only screen and (min-width: 480px) {
+        .footer {
+            bottom: 35px;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        .container-grid {
+            margin-top: 13vh;
+            margin-bottom: 5vh;
+        }
+        .footer {
+            bottom: 6vh;
+        }
+    }
 `;

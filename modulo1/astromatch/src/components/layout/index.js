@@ -10,7 +10,6 @@ import * as S from './styles'
 import api from "../services/api";
 
 const Layout = () =>{
-
     const [profile, setProfile] = useState({});
     const [isMatch, setIsMatch] = useState(false);
     const [isHide, setIsHide] = useState(true);
