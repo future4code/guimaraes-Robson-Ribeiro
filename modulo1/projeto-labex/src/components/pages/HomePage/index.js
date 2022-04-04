@@ -12,8 +12,8 @@ const HomePage = () => {
 
     useEffect(()=>{backgroudRandom(1)},[]);
 
-    const goToListTripPage = () => {
-        navigate("/trips/list")
+    const goTopPage = (url) => {
+        navigate(url)
     }
 
     const backgroudRandom = (start) => {        
@@ -27,8 +27,8 @@ const HomePage = () => {
     return (<div className="home-page-container" >
         <div className="home-info">
             <h1>Bem vindo(a) ao LabeX</h1>
-            <button className="btn-styles" onClick={() => goToListTripPage()}>Lista de Viagens</button>
-            <button className="btn-styles">Área Adm</button>
+            <button className="btn-styles" onClick={() => goTopPage('/trips/list')}>Lista de Viagens</button>
+            <button className="btn-styles" onClick={() => goTopPage('/login')}>Área Adm</button>
         </div>
     </div>)
 }

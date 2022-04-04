@@ -17,8 +17,12 @@ const ListTripsPage = () => {
     const [backgroudRadom, setBackgroundRadom] = useState(
     [backgroud1, backgroud2, backgroud3, backgroud4,backgroud5, backgroud6, backgroud7, backgroud8, backgroud9]
     );
+    
     const navegate = useNavigate();
 
+    const goToPage = (url) =>{
+        navegate(url)
+    }
 
     useEffect(()=>{backgroudRandom(6)},[]);
     
@@ -32,8 +36,8 @@ const ListTripsPage = () => {
     return(
     <div className="container">    
         <div className="btn-info">
-            <button>Voltar</button>
-            <button>Inscrever-se</button>
+            <button className="btn-styles" onClick={() => goToPage('/')}>Voltar</button>
+            <button className="btn-styles" onClick={() => goToPage('/trips/application')}>Inscrever-se</button>
         </div>
 
         <h1>Lista de Viagens</h1>

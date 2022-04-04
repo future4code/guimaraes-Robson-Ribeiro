@@ -68,3 +68,24 @@
     padding-left: 5px;
     padding-top: 7px;
 }
+
+.btn-info>button{
+    margin: 1em;
+    width: 10em;
+    height: 3em;
+    border-radius: 5em;
+    font-size: 1.45em;
+}
+
+.btn-styles{
+    border: none;       
+}
+
+.btn-styles:hover{
+    cursor: pointer;
+    color: blue;
+    transition: 0.5s;
+    text-shadow: 0.3px 0.3px black;
+
+    background-color: aqua;
+}
