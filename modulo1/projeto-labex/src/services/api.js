@@ -1,10 +1,49 @@
-import axios from "axios";
-import apiConfig from "./apiConfig";
+import apiLabeX from "./apiLabex";
 
-const api = axios.create({
-    apiName: apiConfig.apiName,
-    baseURL: apiConfig.baseURL,
-    headers: apiConfig.headers
-})
+const aluno = 'robson-ribeiro-guimaraes';
 
-export default api;
+const api = {
+    labeX: {
+        populate: () => {},
+        getTrips: () => {
+            const url = `${aluno}/trips`;
+            return apiLabeX.get(url);
+        },
+        getTripDetail: () => {},
+        createTrip: () => {},
+        applyTrip: () => {},
+        deleteTrip: () => {},
+        
+        signUp: (email, password) => {
+            const url = `${aluno}/signup`
+            const body = {
+                email: email,
+                password: password
+            } 
+            return apiLabeX.post(url, body);
+        },
+
+        login: ( email, password ) => {
+            const url = `${aluno}/login`;
+            const body  = {
+                email: email,
+                password: password
+            }
+
+            return apiLabeX.post(url, body);
+        },
+        decideCandidate: () => {}
+    }
+}
+
+const monutHeaders = (auth) => {
+    const headers = {
+        headers:{
+            Auth: auth
+        }
+    }
+
+    return headers;
+}
+
+export default api
