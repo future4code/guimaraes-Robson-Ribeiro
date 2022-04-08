@@ -10,9 +10,15 @@ const api = {
             return apiLabeX.get(url);
         },
         getTripDetail: () => {},
-        createTrip: () => {},
+        createTrip: (data, auth) => {
+            const url = `${aluno}/trips`
+            return apiLabeX.post(url, data, monutHeaders(auth))
+        },
         applyTrip: () => {},
-        deleteTrip: () => {},
+        deleteTrip: (idTrip, auth) => {
+            const url = `${aluno}/trips/${idTrip}`
+            return apiLabeX.delete(url, monutHeaders(auth));
+        },
         
         signUp: (email, password) => {
             const url = `${aluno}/signup`

@@ -9,14 +9,14 @@ const LoginPage = () => {
     const navegate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [token, setToken] = useState();
-    const [user, setUser] = useState({});
 
     const goToPage = (url) =>{
         navegate(url)
     }
 
     const signUp = () => {
+
+        if(email === '' || password === '') return toast.error("É necessário informar os dados de acesso");
         api.labeX.signUp(email, password)
         .then(( response )=> {
             console.log("response: ",response.data)
@@ -32,9 +32,7 @@ const LoginPage = () => {
     const login = (email, password) => {
         api.labeX.login(email, password)
         .then((response) => { 
-            setToken(response.token);
-            setUser(response.user);
-            sessionStorage.setItem('token', response.token);
+            sessionStorage.setItem('Auth', response.token);
             sessionStorage.setItem('user', JSON.stringify(response.user));
             toast.success("Bem vindo de volta");    
             navegate('/admin/trips/list', { replace: true });  

@@ -1,0 +1,35 @@
+.card-admin{
+    display: flex;
+    background-color: white;
+    height: 50px;
+    width: 700px;
+
+    margin: 5px;
+
+    border-radius: 5px;
+}
+
+.card-admin > .info{
+    justify-content: space-between;
+    margin: auto 20px;
+    width: 100%;
+
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.card-admin > .info > button{
+    width: 20px;
+    height: 20px;
+
+    border-style: none;
+    background-color: white;
+}
+
+.card-admin > .info > button:hover{
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
