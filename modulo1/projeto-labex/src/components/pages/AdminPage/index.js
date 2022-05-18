@@ -10,7 +10,6 @@ const AdminHomePage = () => {
     const [trips, setTrips] = useState([]);
     const [auth, setAuth] = useState(sessionStorage.getItem('Auth'));
     
-
     const goToPage = (url) => {
         navigate(url);
     }
