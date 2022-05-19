@@ -1,0 +1,13 @@
+{
+  "name": "exercicio1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exercicio1.js",
+  "type": "module",
+  "scripts": {
+    "start": "clear && node index.js Robson 34"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "exercicio3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exercicio3.js",
+  "type": "module",
+  "scripts": {
+    "start": "clear && node exercicio3.js Mercado Feira"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
