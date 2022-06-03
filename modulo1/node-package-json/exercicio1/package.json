@@ -1,0 +1,13 @@
+{
+  "name": "exercicio1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exercicio1.js",
+  "type": "module",
+  "scripts": {
+    "start": "clear && node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
