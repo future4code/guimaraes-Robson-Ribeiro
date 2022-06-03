@@ -1,0 +1,50 @@
+
+.home-page-container{
+    display: flex;
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* background-image: url("../../../img/backgroud4.jpg"); */
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.home-info{
+    margin: calc(.0625em * 5);
+    width: auto;
+}
+
+.home-info > h1 {
+    margin: calc(.0625em *2);   
+    font-size: 3em;
+    width: auto;
+
+    text-shadow: 1.10px 1.10px aqua;
+}
+
+.home-info > button{
+    margin: 1em;
+    width: 10em;
+    height: 3em;
+    border-radius: 5em;
+    font-size: 1.45em;
+}
+
+.btn-styles{
+    border: none;   
+}
+
+.btn-styles:hover{
+    cursor: pointer;
+    color: blue;
+    transition: 0.5s;
+    text-shadow: 0.3px 0.3px black;
+
+    background-color: aqua;
+}

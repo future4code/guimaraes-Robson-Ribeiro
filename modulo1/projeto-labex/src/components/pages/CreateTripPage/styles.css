@@ -1,0 +1,46 @@
+.card-create-trip{
+    display: flex;
+
+    /* background-color: white; */
+    height: 400px;
+    width: 700px;
+
+    margin: 5px;
+
+    border-radius: 5px;
+}
+
+.card-create-trip > .info{
+    flex-direction: column;
+
+    width: 100%;
+
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 10px 0;
+}
+
+.card-create-trip > .info > input,select, textarea{
+    width: 90%;
+    height: 50px;
+
+    background-color: white;
+
+    margin: 5px auto;
+    border-radius: 5px;
+
+    border: 1px solid black;
+    padding-left: 5px;
+}
+
+.card-create-trip > .info > textarea{
+    width: 100%;
+    max-width: 620px;
+    min-width: 620px;
+    margin: auto 32px;
+    height: 135px;
+
+    padding: 5px;
+}
