@@ -1,9 +1,15 @@
 export type UserType = {
     name: string,
     cpf: string,
-    dataNascimento: string,
+    dataNascimento: Date,
     saldo: number,
-    extrato?: [{ valor: number, data: string, descricao: string }]
+    extrato?: ExtratoType[]
+}
+
+type ExtratoType = {
+    valor: number, 
+    data: string, 
+    descricao: string
 }
 
 export const Users: UserType[] = []
