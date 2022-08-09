@@ -1,0 +1,47 @@
+POST http://localhost:3003/user/create 
+Content-Type: application/json 
+
+{    
+    "name": "Levi",
+    "email": "333@gmail.com",
+    "password": "testando"
+}
+
+###
+POST http://localhost:3003/post/create 
+Content-Type: application/json 
+
+{
+    
+    "photo": "httppp...",
+    "description": "ferias ferias",
+    "author_id" : "c2dbf086-0a8f-4c42-aad5-2d1ebd7d8161"
+    
+}
+
+###
+GET http://localhost:3003/post/findPostFriendsByUserId/15c647ab-26b7-4226-9764-e7b38f728ec4
+Content-Type: application/json 
+
+###
+GET http://localhost:3003/post/20b98012-18cf-47a5-8ac3-50fa7f2b8599
+Content-Type: application/json 
+
+###
+POST http://localhost:3003/amizade/create
+Content-Type: application/json 
+
+{
+    "idUsuarioSolicitante": "15c647ab-26b7-4226-9764-e7b38f728ec4",
+    "idUsuarioAmigo": "bbabb5a6-991a-4fec-9c2f-9845f3f7d0bc"
+}
+
+
+###
+GET http://localhost:3003/amizade/all
+Content-Type: application/json 
+
+
+###
+DELETE http://localhost:3003/amizade/15c647ab-26b7-4226-9764-e7b38f728ec4
+Content-Type: application/json 

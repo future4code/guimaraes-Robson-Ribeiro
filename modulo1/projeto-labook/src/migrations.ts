@@ -2,6 +2,7 @@ import { BaseDatabase } from "./data/BaseDatabase";
 
 class Migrations extends BaseDatabase{   
    async createScript(): Promise<void>{
+
       Migrations.connection
       .raw(`
          CREATE TABLE IF NOT EXISTS labook_users (
@@ -27,6 +28,22 @@ class Migrations extends BaseDatabase{
          );
       `).then(console.log)
       .catch(console.log)
+
+
+      
+      Migrations.connection
+      .raw(`
+         CREATE TABLE IF NOT EXISTS labook_amizade (
+            id VARCHAR(255) PRIMARY KEY,
+            idUsuarioSolicitante VARCHAR(255),
+            idUsuarioAmigo VARCHAR(255),
+            createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (idUsuarioSolicitante) REFERENCES labook_users (id),
+            FOREIGN KEY (idUsuarioAmigo) REFERENCES labook_users (id)
+         );
+      `).then(console.log)
+      .catch(console.log)
+
    }
 }
 

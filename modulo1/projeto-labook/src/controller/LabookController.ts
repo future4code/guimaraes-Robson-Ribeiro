@@ -1,9 +1,10 @@
-import { Request, Response } from "express"; 
+import { Request, Response } from "express";
 import { LabookBusiness } from "../business/LabookBusiness";
 
-export class LabookController{
+export class LabookController extends ValidityState{
     async create( req: Request, res: Response ): Promise<void>{
         try {
+
             const { name, email, password } = req.body
             const laBookBusiness = new LabookBusiness()
             await laBookBusiness.create({ name, email, password })

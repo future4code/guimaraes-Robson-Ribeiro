@@ -1,5 +1,5 @@
 import { LabookDatabase } from "../data/LabookDatabase"
-import { v4 as generateId } from 'uuid'
+import generateId from "../Services/generateId"
 
 export class LabookBusiness{
     async create({name, email, password }: any): Promise<void>{
