@@ -45,3 +45,4 @@ Content-Type: application/json
 ###
 DELETE http://localhost:3003/amizade/15c647ab-26b7-4226-9764-e7b38f728ec4
 Content-Type: application/json 
+s

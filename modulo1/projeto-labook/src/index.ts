@@ -5,6 +5,7 @@ import cors from "cors"
 import { userRouter } from "../src/routers/userRouter"
 import { postRouter } from "../src/routers/postRouter"
 import { amizadeRouter } from "./routers/AmizadeRoute"
+import { AddressInfo } from "net";
 
 /**************************** CONFIG ******************************/
 
@@ -24,10 +25,11 @@ app.use('/amizade', amizadeRouter )
 
 /**************************** SERVER INIT ******************************/
 
-app.listen(3003, () => {
-   console.log("Server running on port 3003")
-})
-
-/*function connection(arg0: string) {
-   throw new Error("Function not implemented.")
-}*/
+const server = app.listen(process.env.PORT || 3003, () => {
+   if (server) {
+       const address = server.address() as AddressInfo;
+       console.log(`Server is running in http://${address.address}:${address.port}`);
+   } else {
+       console.error(`Failure upon starting server.`);
+   }
+});
