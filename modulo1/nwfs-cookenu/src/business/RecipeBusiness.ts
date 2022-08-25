@@ -23,7 +23,7 @@ export class RecipeBusiness {
     
     const id = idGenerator.generateId()
 
-    const recipe :recipeType = {
+    const recipe: recipeType = {
         date,
         description,
         id,
@@ -33,6 +33,14 @@ export class RecipeBusiness {
     
     await this.recipeDB.insertRecipe(recipe)
 
+  }
+
+  public findRecipeById = async (id: string): Promise<recipeType> => {
+    try {
+      return await this.recipeDB.findRecipeById(id)
+    } catch (error: any) {
+      throw new CustomError(400, error.message)
+    }
   }
 
 //   public login = async (input: LoginUserInputDTO) => {

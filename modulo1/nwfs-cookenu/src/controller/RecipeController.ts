@@ -25,7 +25,17 @@ export class RecipeController {
         } catch (error: any) {
           res.status(400).send(error.message);
         }
-      };    
+      }; 
+      
+      public findRecipeById = async (req: Request, res: Response) => {
+        try {
+          const id = req.params.id as string
+          const recipeData = await this.recipeBusiness.findRecipeById(id)
+          res.status(200).send(recipeData)
+        } catch (error: any) {
+          res.status(400).send(error.message)
+        }
+      }
 
     //   public login = async (req: Request, res: Response) => {
     //     try {

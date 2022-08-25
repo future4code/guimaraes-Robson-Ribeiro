@@ -6,8 +6,10 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.listen(3003, ()=>{
-    console.log('My server is running 3005')
+const port = 3003
+
+app.listen(port, ()=>{
+    console.log(`My server is running ${port}`)
 })
 
 export default app

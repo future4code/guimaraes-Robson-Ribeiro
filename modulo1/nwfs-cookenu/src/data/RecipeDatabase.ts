@@ -26,6 +26,18 @@ export class RecipeDatabase extends BaseDatabase {
     }
   };
 
+
+  public findRecipeById = async(id: string): Promise<recipeType> => {
+    try{
+      return await RecipeDatabase.connection()
+      .select("*")
+      .from(this.tableName.toString())
+      .where("id", "=", id ) as any
+    }catch(error: any){
+      throw new CustomError(400, error.message)
+    }
+  }
+
 //   public editUser = async (user: EditUserInput) => {
 //     try {
 //       await UserDatabase.connection
