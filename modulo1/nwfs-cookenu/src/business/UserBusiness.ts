@@ -7,6 +7,7 @@ import {
   EditUserInputDTO,
   EditUserInput,
   LoginUserInputDTO,
+  ProfileInputDTO,
 } from "../model/user";
 import Authenticator from "../services/Authenticator";
 import HashManager from "../services/HashManager";
@@ -52,7 +53,6 @@ export class UserBusiness {
       throw new CustomError(400, "falta parametro")
     }
 
-
     const user = await this.userDB.findUserByEmail(email)
     const hashCompare = await HashManager.compareHash(
       password,
@@ -69,8 +69,50 @@ export class UserBusiness {
 
     const token = Authenticator.generateToken(payload)
 
-    return token
-    
+    return token    
+  }
+
+  public profile = async (token: string): Promise<ProfileInputDTO> => {
+    try {
+      const { id } = Authenticator.getTokenData(token) as any 
+      const profileData = await this.userDB.getUserById(id)
+      const data: ProfileInputDTO ={
+        email: profileData.email,
+        id: profileData.id,
+        name: profileData.name
+      }
+
+      return data
+    }catch (error: any){
+      return error
+    }
+  }
+
+  public otherProfile = async (token: string, otherId: string): Promise<ProfileInputDTO> => {
+    try {
+      const { id } = Authenticator.getTokenData(token) as any       
+      const profileData: ProfileInputDTO = await this.userDB.getUserById(id)      
+      const otherProfileData: ProfileInputDTO = await this.userDB.getUserById(otherId)
+
+      if(!profileData){
+        return profileData
+      }
+
+      if(!otherProfileData){
+        return otherProfileData
+      }
+
+      const data: ProfileInputDTO ={
+        email: otherProfileData.email,
+        id: otherProfileData.id,
+        name: otherProfileData.name
+      }
+
+      return data
+
+    }catch (error: any){
+      return error
+    }
   }
   
   

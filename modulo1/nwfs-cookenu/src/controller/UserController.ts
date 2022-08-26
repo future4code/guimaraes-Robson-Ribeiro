@@ -48,15 +48,25 @@ export class UserController {
       public profile = async (req: Request, res: Response) => {
         try {
 
-         const input = {
-          email: req.body.email,
-          password: req.body.password
+          const token = req.headers.authorization as string
+          const profile = await this.userBusiness.profile(token)
 
-         }
+         res.status(200).send({message: "login feito com sucesso", profile: profile })
+          
+        } catch (error: any) {
+          res.status(400).send(error.message);
+        }
 
-         const token = await this.userBusiness.login(input)
+      }
 
-         res.status(200).send({message: "login feito com sucesso", token})
+      public otherProfile = async (req: Request, res: Response) => {
+        try {
+
+          const token = req.headers.authorization as string
+          const otherId = req.params.id as string
+          const profile = await this.userBusiness.otherProfile(token, otherId)
+
+         res.status(200).send({message: "perfil do usuário", profile: profile })
           
         } catch (error: any) {
           res.status(400).send(error.message);

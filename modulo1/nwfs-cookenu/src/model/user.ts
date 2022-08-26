@@ -24,5 +24,10 @@ export interface EditUserInput {
 export interface LoginUserInputDTO {
    email: string,
    password: string
+}
 
+export interface ProfileInputDTO{
+   id: string,
+   name: string,
+   email: string
 }
