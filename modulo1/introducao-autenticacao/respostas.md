@@ -1,0 +1,2 @@
+###ex01
+<h1>Usar string é a forma mais segura, IDs devem ser aleatórios e impreviseveis. Sendo não sequencial, dificulta bastante a chance de alguém tentar achar ou encontra algum ID na sua base. </h1>
